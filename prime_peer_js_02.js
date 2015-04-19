@@ -1,3 +1,19 @@
+
+/*var scott = new Object();
+
+scott.name = "Scott Bromander";     //creates, also
+scott.employeeNumber = 24856;
+scott.salary = 1000000;
+scott.rating = 4;
+scott.debt = 500000;
+
+scott.availableIncome = function (){
+	return this.salary - this.debt;
+};
+
+console.log(scott.availableIncome());*/
+
+
 function Person(name, lastName, corgis, kittens) {
 	this.name = name;
 	this.lastName = lastName;
@@ -6,6 +22,9 @@ function Person(name, lastName, corgis, kittens) {
 
 	
 }
+
+/*var person1 = new Person("Scott", "Bromander", getAge());*/
+
 
 var person1 = new Person("Jeanne", "Erickson Cooley", getCorgis(), getKittens());
 var person2 = new Person("Tracy", "Fuller", getCorgis(), getKittens());
@@ -33,23 +52,27 @@ var array = [person1, person2, person3, person4, person5, person6, person7, pers
 for(var i=0; i < array.length; i++){
 	console.log(array[i].name);
 	console.log(array[i].lastName);
-	console.log("Has "+array[i].corgis+" hungry corgis");
-	console.log("Has "+array[i].kittens+" fluffy kittens");
+	console.log("Has " + array[i].corgis + " hungry corgis and");
+	console.log(" " + array[i].kittens + " fluffy kittens.");
 }
 
 function getCorgis(){
-
 	var corgis = randomNumber(1,10);
 	return corgis;
-};
+}
 
 function getKittens() {
 	var kittens = randomNumber(16,105);
 	return kittens;
-};
+}
 
 function randomNumber(min, max) {
 	return Math.floor(Math.random() * (1 + max - min) + min);
 };
 
 
+//Utility function
+//A simple random number generator
+/*function randomNumber(min, max) {
+	return Math.floor(Math.random() * (1 + max - min) + min);
+} */
